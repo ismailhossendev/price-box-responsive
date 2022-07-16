@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.prices{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.box{
+    border-radius: 10px;
+    background: rgb(238, 232, 232);
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+
+/* for mobile  */
+@media screen and (max-width: 576px) {
+    .prices{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* for tables  */
+@media screen and (min-width: 577px) and (max-width:768px) {
+    .prices{
+        grid-template-columns: 1fr 1fr;
+    }
+    .box-5{
+        grid-column: span 2;
+    }
+}
